@@ -106,11 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
       final Map<String, dynamic> jsonData = jsonDecode(generatedContent);
 
       // 결과 및 이슈 추출
-      final String? result = jsonData['result'];
+      final bool? result = jsonData['result'];
       final String? issue = jsonData['issue'];
 
       // 결과에 따라 추가 처리 수행 (예시)
-      if (result.toString() == "true") {
+      if (result == true) {
         // 콘텐츠가 안전하고 관련성이 높은 경우
         print('콘텐츠가 승인되었습니다.');
         return true; // 최종 결과 반환
